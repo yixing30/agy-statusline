@@ -1,9 +1,0 @@
-{
-  "theme": "aurora",
-  "style": "powerline",
-  "layout": "two-lines",
-  "nerd_fonts": true,
-  "progress_bar": "smooth",
-  "show_quota": true,
-  "show_cost": true
-}
