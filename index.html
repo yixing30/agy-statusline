@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status Line Builder</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <h1>Status Line Builder</h1>
+      <p>Design your perfect terminal status line with dynamic themes and layouts.</p>
+    </header>
+
+    <main class="main-content">
+      <!-- Terminal Preview -->
+      <section class="terminal-wrapper">
+        <div class="terminal">
+          <div class="titlebar">
+            <div class="mac-btns">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="term-title">claude — <span id="title-state">gray · powerline · 1 line</span></span>
+          </div>
+          <div class="term-body">
+            <p class="term-line"><span class="pmt">~/ccspace ❯</span> claude</p>
+          </div>
+          <div id="statusline-container" class="statusline-container one-line powerline theme-gray">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Controls -->
+      <section class="controls">
+        <div class="control-group">
+          <h2>Layout</h2>
+          <div class="options" id="layout-options">
+            <button class="option-btn active" data-value="one-line">1 Line</button>
+            <button class="option-btn" data-value="two-lines">2 Lines</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h2>Style</h2>
+          <div class="options" id="style-options">
+            <button class="option-btn active" data-value="powerline">Powerline</button>
+            <button class="option-btn" data-value="plain">Plain</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <h2>Theme</h2>
+          <div class="options theme-options" id="theme-options">
+            <button class="theme-btn active" data-value="theme-gray">
+              <div class="theme-preview gray-preview"></div>
+              <span>Gray Ramp</span>
+            </button>
+            <button class="theme-btn" data-value="theme-aurora">
+              <div class="theme-preview aurora-preview"></div>
+              <span>Aurora</span>
+            </button>
+            <button class="theme-btn" data-value="theme-sunset">
+              <div class="theme-preview sunset-preview"></div>
+              <span>Sunset</span>
+            </button>
+            <button class="theme-btn" data-value="theme-forest">
+              <div class="theme-preview forest-preview"></div>
+              <span>Forest</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
